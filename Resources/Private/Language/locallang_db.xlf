@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-08T22:11:29Z" product-name="publicaciones_unal">
+		<header/>
+		<body>
+			<trans-unit id="tx_publicacionesunal_domain_model_tipo">
+				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_tipo.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_tipo.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_tipo.publicaciones">
+				<source>Publicaciones</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion">
+				<source>Publicacion</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.titulo">
+				<source>Titulo</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.subtitulo">
+				<source>Subtitulo</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.autor">
+				<source>Autor</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.fecha">
+				<source>Fecha</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.lugar">
+				<source>Lugar</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.thumbnail">
+				<source>Thumbnail</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.descripcion">
+				<source>Descripcion</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.url_archivo">
+				<source>Url Archivo</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.archivo">
+				<source>Archivo</source>
+			</trans-unit>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.tipo">
+				<source>Tipo</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

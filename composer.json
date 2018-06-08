@@ -1,0 +1,19 @@
+{
+    "name": "unal/publicaciones-unal",
+    "type": "typo3-cms-extension",
+    "description": "Extension que permite mostrar publicaciones de una dependencia",
+    "authors": [
+        {
+            "name": "Alexis Ortiz",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "UNAL\\PublicacionesUnal\\": "Classes"
+        }
+    }
+}
