@@ -49,36 +49,15 @@ plugin.tx_publicacionesunal_previewpublicaciones {
     }
 }
 
-# these classes are only used in auto-generated templates
-plugin.tx_publicacionesunal._CSS_DEFAULT_STYLE (
-    textarea.f3-form-error {
-        background-color:#FF9F9F;
-        border: 1px #FF0000 solid;
+page{
+    includeCSS {
+        tipos-publicaciones = EXT:publicaciones_unal/Resources/Public/Css/tipos-publicaciones.scss
+        animate = EXT:publicaciones_unal/Resources/Public/Css/animate.css
     }
 
-    input.f3-form-error {
-        background-color:#FF9F9F;
-        border: 1px #FF0000 solid;
+    includeJS{
+        wow = EXT:publicaciones_unal/Resources/Public/Js/wow.min.js  
     }
+}
 
-    .tx-publicaciones-unal table {
-        border-collapse:separate;
-        border-spacing:10px;
-    }
 
-    .tx-publicaciones-unal table th {
-        font-weight:bold;
-    }
-
-    .tx-publicaciones-unal table td {
-        vertical-align:top;
-    }
-
-    .typo3-messages .message-error {
-        color:red;
-    }
-
-    .typo3-messages .message-ok {
-        color:green;
-    }
-)
