@@ -8,10 +8,6 @@ plugin.tx_publicacionesunal_tipospublicaciones {
         layoutRootPaths.0 = EXT:publicaciones_unal/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_publicacionesunal_tipospublicaciones.view.layoutRootPath}
     }
-    persistence {
-        storagePid = {$plugin.tx_publicacionesunal_tipospublicaciones.persistence.storagePid}
-        #recursive = 1
-    }
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
@@ -56,7 +52,9 @@ page{
     }
 
     includeJS{
-        wow = EXT:publicaciones_unal/Resources/Public/Js/wow.min.js  
+        wow = EXT:publicaciones_unal/Resources/Public/Js/wow.js  
+        publicaciones = EXT:publicaciones_unal/Resources/Public/Js/publicaciones.js  
+        masonry = EXT:publicaciones_unal/Resources/Public/Js/masonry.pkgd.js  
     }
 }
 

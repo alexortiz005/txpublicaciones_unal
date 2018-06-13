@@ -14,69 +14,63 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="main">
 
+	<script>
+	    wow = new WOW(
+	      {
+	        animateClass: 'animated',
+	        offset:       100
+	      }
+	    );
+	    wow.init();	    
+	</script>	
 
-	<div class="tx_publicacionesunal">
-		<div class="container-fluid">			
-			<div class="row">
-
-				<div class="col-md-offset-3 col-md-6">
-					<div class="btn-group btn-group-justified">
-					  <a href="#" class="btn btn-info">Lorem</a>
-					  <a href="#" class="btn btn-info">Ipsum</a>
-					  <a href="#" class="btn btn-info">Dolor</a>
-					  <a href="#" class="btn btn-info">sit</a>
-					  <a href="#" class="btn btn-info">Amet</a>
-					</div>
+	<div class="container-fluid">
+		<!-- add extra container element for Masonry -->
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6 botonesTiposPublicacion">
+				<div class="btn-group btn-group-justified">
+					<f:for each="{tipos}" as="tipo">
+					    <a href="#"  onclick="event.preventDefault();clickTipo({tipo.uid});" class="btn btn-info botonTipoPublicacion">{tipo.nombreDisplay}</a>
+					</f:for>
+				 
 				</div>
-
-
-				<f:for each="{0:1, 1:2, 2:3, 3:4, 4:5, 5:6, 6:7, 8:9, 9:10}" as="foo">
-					
-					<!-- 
-					<div class="col-md-4 col-xs-12 col-sm-6">				
-						<div class="vertical-card">
-						  	<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
-							<div class="container-fluid vertical-card-body">
-								<div class="titulo"><h3>Titulo de la respectiva publicación <small>Subtitulo de la respectiva publicación </small> </h3></div>
-								<div class="info">ONP / 14 de mayo de 2018 / Bogotá</div>
-								<div class="descripcion"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>
-								<a href="#" class="btn btn-info btn-block" role="button">Ver Mas</a>
-								
-							</div>
-						</div>			
-					</div>
-					--> 			
-
-					<!-- 
-					--> 			
-					<div class="col-md-12 col-xs-12 col-sm-12 horizontal-card ">				
-						<div class="row">
-							<div class="col-md-3 img-container"> 
-								<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" >
-							</div>
-							<div class="col-md-9 ">								
-								<div class="container-fluid horizontal-card-body">
-									<div class="titulo" >
-										<a href="#"><h3>Titulo de la respectiva publicación</h3> <h4>Subtitulo de la respectiva publicación </h4> </a>										
-									</div>
-
-									<div class="info">ONP / 14 de mayo de 2018 / Bogotá</div>
-									<div class="descripcion"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>									
-								</div>
-						  	
-							</div>
-						</div>			
-					</div>
-	
-				</f:for>
-
-				
-
-
-				
 			</div>
 		</div>
+		<div class="grid">
+			<!-- add sizing element for columnWidth -->
+			<div class="grid-sizer col-md-4"></div>
+
+			<f:for each="{publicaciones}" as="publicacion">	
+				<!-- items use Bootstrap .col- classes -->
+				<div class="grid-item col-md-4">
+					<div class="grid-item-content">
+
+						<div class="wow bounceInUp" data-wow-duration="2s" data-wow-offset="-200">				
+							<div class="vertical-card " >
+							  	<img src="{publicacion.Thumbnail.originalResource.publicUrl}"  style="width:100%">
+								<div class="container-fluid vertical-card-body">
+									<div class="titulo"><h3>{publicacion.Titulo}</h3> <h4>{publicacion.Subtitulo} </h4> </div>
+									<div class="info">{publicacion.Autor} / <f:format.date format="d - m - Y">{publicacion.Fecha}</f:format.date>/ {publicacion.Lugar}</div>
+									<div class="descripcion"><f:format.html>{publicacion.Descripcion}</f:format.html></div>
+									<a href="#" class="btn btn-info btn-block" role="button">Ver Mas</a>
+									
+								</div>
+							</div>			
+						</div>
+						
+					</div>
+				</div>			
+
+			</f:for>
+		</div>
 	</div>
+	<script>
+	   	$('.grid').masonry({
+		  itemSelector: '.grid-item',
+		  columnWidth: '.grid-sizer',
+		  percentPosition: true
+		});	    
+	</script>
 
 	
 

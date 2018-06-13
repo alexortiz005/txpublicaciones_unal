@@ -26,6 +26,14 @@ class TipoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $tipoRepository = null;
 
     /**
+     * publicacionRepository
+     *
+     * @var \UNAL\PublicacionesUnal\Domain\Repository\PublicacionRepository
+     * @inject
+     */
+    protected $publicacionRepository = null;
+
+    /**
      * action list
      *
      * @return void
@@ -33,6 +41,7 @@ class TipoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function listAction()
     {
         $tipos = $this->tipoRepository->findAll();
-        $this->view->assign('tipos', $tipos);
+        $publicaciones = $this->publicacionRepository->findAll();
+        $this->view->assignMultiple(['tipos'=>$tipos,'publicaciones'=>$publicaciones]);
     }
 }
