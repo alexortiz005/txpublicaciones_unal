@@ -27,7 +27,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	<div class="container-fluid">
 		<!-- add extra container element for Masonry -->
 		<div class="row">
-			<div class="col-md-offset-3 col-md-6 botonesTiposPublicacion">
+			<div class="col-md-offset-1 col-md-10 col-xs-12 botonesTiposPublicacion">
 				<div class="btn-group btn-group-justified">
 					<f:for each="{tipos}" as="tipo">
 					    <a href="#"  onclick="event.preventDefault();clickTipo({tipo.uid});" class="btn btn-info botonTipoPublicacion">{tipo.nombreDisplay}</a>
@@ -42,7 +42,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 			<f:for each="{publicaciones}" as="publicacion">	
 				<!-- items use Bootstrap .col- classes -->
-				<div class="grid-item col-md-4">
+				<div class="grid-item col-md-4 publicacion" data-tipos='[<f:for each="{publicacion.Tipo}" as="tipo" iteration="iterator">{tipo.uid}{f:if(condition: iterator.isLast, then: '', else: ',')}</f:for>]'>
 					<div class="grid-item-content">
 
 						<div class="wow bounceInUp" data-wow-duration="2s" data-wow-offset="-200">				
@@ -54,6 +54,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 									<div class="descripcion"><f:format.html>{publicacion.Descripcion}</f:format.html></div>
 									<a href="#" class="btn btn-info btn-block" role="button">Ver Mas</a>
 									
+									
 								</div>
 							</div>			
 						</div>
@@ -64,14 +65,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			</f:for>
 		</div>
 	</div>
-	<script>
-	   	$('.grid').masonry({
-		  itemSelector: '.grid-item',
-		  columnWidth: '.grid-sizer',
-		  percentPosition: true
-		});	    
-	</script>
-
 	
 
 </f:section>

@@ -53,8 +53,13 @@ page{
 
     includeJS{
         wow = EXT:publicaciones_unal/Resources/Public/Js/wow.js  
-        publicaciones = EXT:publicaciones_unal/Resources/Public/Js/publicaciones.js  
-        masonry = EXT:publicaciones_unal/Resources/Public/Js/masonry.pkgd.js  
+       
+    }
+
+    includeJSFooter{
+         masonry = EXT:publicaciones_unal/Resources/Public/Js/masonry.pkgd.js  
+        publicaciones = EXT:publicaciones_unal/Resources/Public/Js/publicaciones.js 
+
     }
 }
 
