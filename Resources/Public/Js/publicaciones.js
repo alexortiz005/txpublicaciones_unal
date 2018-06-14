@@ -23,3 +23,5 @@ function loadMasonry(){
 }
 
 loadMasonry();
+loadMasonry();
+
