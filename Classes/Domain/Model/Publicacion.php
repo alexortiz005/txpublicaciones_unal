@@ -90,11 +90,11 @@ class Publicacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $archivo = null;
 
     /**
-     * tipo
+     * tipos
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\UNAL\PublicacionesUnal\Domain\Model\Tipo>
      */
-    protected $tipo = null;
+    protected $tipos = null;
 
     /**
      * __construct
@@ -115,7 +115,7 @@ class Publicacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected function initStorageObjects()
     {
-        $this->tipo = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->tipos = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -336,7 +336,7 @@ class Publicacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function addTipo(\UNAL\PublicacionesUnal\Domain\Model\Tipo $tipo)
     {
-        $this->tipo->attach($tipo);
+        $this->tipos->attach($tipos);
     }
 
     /**
@@ -347,27 +347,27 @@ class Publicacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function removeTipo(\UNAL\PublicacionesUnal\Domain\Model\Tipo $tipoToRemove)
     {
-        $this->tipo->detach($tipoToRemove);
+        $this->tipos->detach($tipoToRemove);
     }
 
     /**
-     * Returns the tipo
+     * Returns the tipos
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\UNAL\PublicacionesUnal\Domain\Model\Tipo> $tipo
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\UNAL\PublicacionesUnal\Domain\Model\Tipo> tipos
      */
-    public function getTipo()
+    public function getTipos()
     {
-        return $this->tipo;
+        return $this->tipos;
     }
 
     /**
-     * Sets the tipo
+     * Sets the tipos
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\UNAL\PublicacionesUnal\Domain\Model\Tipo> $tipo
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\UNAL\PublicacionesUnal\Domain\Model\Tipo> $tipos
      * @return void
      */
-    public function setTipo(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tipo)
+    public function setTipos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tipos)
     {
-        $this->tipo = $tipo;
+        $this->tipos = $tipos;
     }
 }

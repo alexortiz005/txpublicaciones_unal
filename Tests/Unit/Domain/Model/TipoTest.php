@@ -77,63 +77,25 @@ class TipoTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getPublicacionesReturnsInitialValueForPublicacion()
+    public function getIsGlobalReturnsInitialValueForBool()
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        self::assertEquals(
-            $newObjectStorage,
-            $this->subject->getPublicaciones()
+        self::assertSame(
+            false,
+            $this->subject->getIsGlobal()
         );
     }
 
     /**
      * @test
      */
-    public function setPublicacionesForObjectStorageContainingPublicacionSetsPublicaciones()
+    public function setIsGlobalForBoolSetsIsGlobal()
     {
-        $publicacione = new \UNAL\PublicacionesUnal\Domain\Model\Publicacion();
-        $objectStorageHoldingExactlyOnePublicaciones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $objectStorageHoldingExactlyOnePublicaciones->attach($publicacione);
-        $this->subject->setPublicaciones($objectStorageHoldingExactlyOnePublicaciones);
+        $this->subject->setIsGlobal(true);
 
         self::assertAttributeEquals(
-            $objectStorageHoldingExactlyOnePublicaciones,
-            'publicaciones',
+            true,
+            'isGlobal',
             $this->subject
         );
-    }
-
-    /**
-     * @test
-     */
-    public function addPublicacioneToObjectStorageHoldingPublicaciones()
-    {
-        $publicacione = new \UNAL\PublicacionesUnal\Domain\Model\Publicacion();
-        $publicacionesObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
-            ->setMethods(['attach'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $publicacionesObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($publicacione));
-        $this->inject($this->subject, 'publicaciones', $publicacionesObjectStorageMock);
-
-        $this->subject->addPublicacione($publicacione);
-    }
-
-    /**
-     * @test
-     */
-    public function removePublicacioneFromObjectStorageHoldingPublicaciones()
-    {
-        $publicacione = new \UNAL\PublicacionesUnal\Domain\Model\Publicacion();
-        $publicacionesObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
-            ->setMethods(['detach'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $publicacionesObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($publicacione));
-        $this->inject($this->subject, 'publicaciones', $publicacionesObjectStorageMock);
-
-        $this->subject->removePublicacione($publicacione);
     }
 }

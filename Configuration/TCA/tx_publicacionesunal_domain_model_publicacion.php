@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'nombre,titulo,subtitulo,autor,fecha,lugar,thumbnail,descripcion,url_archivo,archivo,tipo',
+        'searchFields' => 'nombre,titulo,subtitulo,autor,fecha,lugar,thumbnail,descripcion,url_archivo,archivo,tipos',
         'iconfile' => 'EXT:publicaciones_unal/Resources/Public/Icons/tx_publicacionesunal_domain_model_publicacion.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, titulo, subtitulo, autor, fecha, lugar, thumbnail, descripcion, url_archivo, archivo, tipo',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, titulo, subtitulo, autor, fecha, lugar, thumbnail, descripcion, url_archivo, archivo, tipos',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, titulo, subtitulo, autor, fecha, lugar, thumbnail, descripcion, url_archivo, archivo, tipo, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, titulo, subtitulo, autor, fecha, lugar, thumbnail, descripcion, url_archivo, archivo, tipos, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -275,9 +275,9 @@ return [
                 ]
             ),
         ],
-        'tipo' => [
+        'tipos' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang_db.xlf:tx_publicacionesunal_domain_model_publicacion.tipo',
+            'label' => 'LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang_db.xlf:tx_publicacionesunal_domain_model_publicacion.tipos',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',

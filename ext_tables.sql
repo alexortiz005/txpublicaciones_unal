@@ -8,7 +8,7 @@ CREATE TABLE tx_publicacionesunal_domain_model_tipo (
 
 	nombre varchar(255) DEFAULT '' NOT NULL,
 	nombre_display varchar(255) DEFAULT '' NOT NULL,
-	publicaciones int(11) unsigned DEFAULT '0' NOT NULL,
+	is_global smallint(5) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE tx_publicacionesunal_domain_model_publicacion (
 	descripcion text,
 	url_archivo varchar(255) DEFAULT '' NOT NULL,
 	archivo int(11) unsigned NOT NULL default '0',
-	tipo int(11) unsigned DEFAULT '0' NOT NULL,
+	tipos int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -88,20 +88,6 @@ CREATE TABLE tx_publicacionesunal_domain_model_publicacion (
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 	KEY language (l10n_parent,sys_language_uid)
 
-);
-
-#
-# Table structure for table 'tx_publicacionesunal_tipo_publicacion_mm'
-#
-CREATE TABLE tx_publicacionesunal_tipo_publicacion_mm (
-	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-	sorting int(11) unsigned DEFAULT '0' NOT NULL,
-	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-
-	PRIMARY KEY (uid_local,uid_foreign),
-	KEY uid_local (uid_local),
-	KEY uid_foreign (uid_foreign)
 );
 
 #

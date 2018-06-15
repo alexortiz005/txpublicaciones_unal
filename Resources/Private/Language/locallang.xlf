@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-08T22:11:29Z" product-name="publicaciones_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-15T19:12:00Z" product-name="publicaciones_unal">
 		<header/>
 		<body>
 			<trans-unit id="tx_publicacionesunal_domain_model_tipo">
@@ -12,8 +12,8 @@
 			<trans-unit id="tx_publicacionesunal_domain_model_tipo.nombre_display">
 				<source>Nombre Display</source>
 			</trans-unit>
-			<trans-unit id="tx_publicacionesunal_domain_model_tipo.publicaciones">
-				<source>Publicaciones</source>
+			<trans-unit id="tx_publicacionesunal_domain_model_tipo.is_global">
+				<source>Is Global</source>
 			</trans-unit>
 			<trans-unit id="tx_publicacionesunal_domain_model_publicacion">
 				<source>Publicacion</source>
@@ -48,8 +48,8 @@
 			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.archivo">
 				<source>Archivo</source>
 			</trans-unit>
-			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.tipo">
-				<source>Tipo</source>
+			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.tipos">
+				<source>Tipos</source>
 			</trans-unit>
 		</body>
 	</file>

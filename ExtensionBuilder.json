@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    234,
-                    168
+                    533,
+                    110
                 ]
             },
             "name": "New Model Object",
@@ -52,31 +52,29 @@
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
                             "uid": "1947704856"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "isGlobal",
+                            "propertyType": "Boolean",
+                            "uid": "785847584753"
                         }
                     ]
                 },
                 "relationGroup": {
-                    "relations": [
-                        {
-                            "foreignRelationClass": "",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "",
-                            "relationName": "publicaciones",
-                            "relationType": "manyToMany",
-                            "relationWire": "[wired]",
-                            "renderType": "selectMultipleSideBySide",
-                            "uid": "1127691687000"
-                        }
-                    ]
+                    "relations": []
                 }
             }
         },
         {
             "config": {
                 "position": [
-                    541,
-                    167
+                    190,
+                    124
                 ]
             },
             "name": "New Model Object",
@@ -217,7 +215,7 @@
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
-                            "relationName": "tipo",
+                            "relationName": "tipos",
                             "relationType": "manyToMany",
                             "relationWire": "[wired]",
                             "renderType": "selectMultipleSideBySide",
@@ -245,8 +243,8 @@
         },
         "extensionKey": "publicaciones_unal",
         "name": "Publicaciones UNAL",
-        "originalExtensionKey": "",
-        "originalVendorName": "",
+        "originalExtensionKey": "publicaciones_unal",
+        "originalVendorName": "UNAL",
         "persons": [
             {
                 "company": "UNAL",
@@ -280,18 +278,6 @@
     "wires": [
         {
             "src": {
-                "moduleId": 0,
-                "terminal": "relationWire_0",
-                "uid": "1127691687000"
-            },
-            "tgt": {
-                "moduleId": 1,
-                "terminal": "SOURCES",
-                "uid": "1369814995917"
-            }
-        },
-        {
-            "src": {
                 "moduleId": 1,
                 "terminal": "relationWire_0",
                 "uid": "699188920403"
@@ -304,7 +290,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-06-08 10:11",
+        "last_modified": "2018-06-15 07:12",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

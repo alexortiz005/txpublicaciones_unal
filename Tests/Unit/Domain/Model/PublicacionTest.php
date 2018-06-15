@@ -280,28 +280,28 @@ class PublicacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getTipoReturnsInitialValueForTipo()
+    public function getTiposReturnsInitialValueForTipo()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
-            $this->subject->getTipo()
+            $this->subject->getTipos()
         );
     }
 
     /**
      * @test
      */
-    public function setTipoForObjectStorageContainingTipoSetsTipo()
+    public function setTiposForObjectStorageContainingTipoSetsTipos()
     {
         $tipo = new \UNAL\PublicacionesUnal\Domain\Model\Tipo();
-        $objectStorageHoldingExactlyOneTipo = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $objectStorageHoldingExactlyOneTipo->attach($tipo);
-        $this->subject->setTipo($objectStorageHoldingExactlyOneTipo);
+        $objectStorageHoldingExactlyOneTipos = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneTipos->attach($tipo);
+        $this->subject->setTipos($objectStorageHoldingExactlyOneTipos);
 
         self::assertAttributeEquals(
-            $objectStorageHoldingExactlyOneTipo,
-            'tipo',
+            $objectStorageHoldingExactlyOneTipos,
+            'tipos',
             $this->subject
         );
     }
@@ -309,16 +309,16 @@ class PublicacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function addTipoToObjectStorageHoldingTipo()
+    public function addTipoToObjectStorageHoldingTipos()
     {
         $tipo = new \UNAL\PublicacionesUnal\Domain\Model\Tipo();
-        $tipoObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $tiposObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
 
-        $tipoObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($tipo));
-        $this->inject($this->subject, 'tipo', $tipoObjectStorageMock);
+        $tiposObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($tipo));
+        $this->inject($this->subject, 'tipos', $tiposObjectStorageMock);
 
         $this->subject->addTipo($tipo);
     }
@@ -326,16 +326,16 @@ class PublicacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function removeTipoFromObjectStorageHoldingTipo()
+    public function removeTipoFromObjectStorageHoldingTipos()
     {
         $tipo = new \UNAL\PublicacionesUnal\Domain\Model\Tipo();
-        $tipoObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $tiposObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();
 
-        $tipoObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($tipo));
-        $this->inject($this->subject, 'tipo', $tipoObjectStorageMock);
+        $tiposObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($tipo));
+        $this->inject($this->subject, 'tipos', $tiposObjectStorageMock);
 
         $this->subject->removeTipo($tipo);
     }

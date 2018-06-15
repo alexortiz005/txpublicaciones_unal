@@ -42,6 +42,6 @@ class TipoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $tipos = $this->tipoRepository->findAll();
         $publicaciones = $this->publicacionRepository->findAll();
-        $this->view->assignMultiple(['tipos'=>$tipos,'publicaciones'=>$publicaciones]);
+        $this->view->assignMultiple(['tipos' => $tipos, 'publicaciones' => $publicaciones]);
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-08T22:11:29Z" product-name="publicaciones_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-15T19:12:00Z" product-name="publicaciones_unal">
 		<header/>
 		<body>
 			<trans-unit id="nombre.description">
@@ -9,8 +9,8 @@
 			<trans-unit id="nombre_display.description">
 				<source>nombreDisplay</source>
 			</trans-unit>
-			<trans-unit id="publicaciones.description">
-				<source>publicaciones</source>
+			<trans-unit id="is_global.description">
+				<source>isGlobal</source>
 			</trans-unit>
 		</body>
 	</file>

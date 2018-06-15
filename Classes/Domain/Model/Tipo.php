@@ -18,6 +18,13 @@ namespace UNAL\PublicacionesUnal\Domain\Model;
 class Tipo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
+     * isGlobal
+     *
+     * @var bool
+     */
+    protected $isGlobal = false;
+
+    /**
      * nombre
      *
      * @var string
@@ -30,13 +37,6 @@ class Tipo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $nombreDisplay = '';
-
-    /**
-     * publicaciones
-     *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\UNAL\PublicacionesUnal\Domain\Model\Publicacion>
-     */
-    protected $publicaciones = null;
 
     /**
      * __construct
@@ -57,7 +57,7 @@ class Tipo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected function initStorageObjects()
     {
-        $this->publicaciones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+
     }
 
     /**
@@ -103,45 +103,33 @@ class Tipo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Adds a Publicacion
+     * Returns the isGlobal
      *
-     * @param \UNAL\PublicacionesUnal\Domain\Model\Publicacion $publicacione
-     * @return void
+     * @return bool $isGlobal
      */
-    public function addPublicacione(\UNAL\PublicacionesUnal\Domain\Model\Publicacion $publicacione)
+    public function getIsGlobal()
     {
-        $this->publicaciones->attach($publicacione);
+        return $this->isGlobal;
     }
 
     /**
-     * Removes a Publicacion
+     * Sets the isGlobal
      *
-     * @param \UNAL\PublicacionesUnal\Domain\Model\Publicacion $publicacioneToRemove The Publicacion to be removed
+     * @param bool $isGlobal
      * @return void
      */
-    public function removePublicacione(\UNAL\PublicacionesUnal\Domain\Model\Publicacion $publicacioneToRemove)
+    public function setIsGlobal($isGlobal)
     {
-        $this->publicaciones->detach($publicacioneToRemove);
+        $this->isGlobal = $isGlobal;
     }
 
     /**
-     * Returns the publicaciones
+     * Returns the boolean state of isGlobal
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\UNAL\PublicacionesUnal\Domain\Model\Publicacion> $publicaciones
+     * @return bool
      */
-    public function getPublicaciones()
+    public function isIsGlobal()
     {
-        return $this->publicaciones;
-    }
-
-    /**
-     * Sets the publicaciones
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\UNAL\PublicacionesUnal\Domain\Model\Publicacion> $publicaciones
-     * @return void
-     */
-    public function setPublicaciones(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $publicaciones)
-    {
-        $this->publicaciones = $publicaciones;
+        return $this->isGlobal;
     }
 }

@@ -32,7 +32,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<div class="col-md-offset-1 col-md-10 col-xs-12 botonesTiposPublicacion">
 				<div class="btn-group btn-group-justified hidden-xs ">
 					<f:for each="{tipos}" as="tipo">
-					    <a href="#"  onclick="event.preventDefault();clickTipo({tipo.uid});" class="btn btn-info botonTipoPublicacion">{tipo.nombreDisplay}</a>
+					    <a href="#" data-tipo="{f:if(condition: tipo.isGlobal, then: '-1', else: '{tipo.uid}')}" onclick="event.preventDefault();" class="btn btn-info botonTipoPublicacion {f:if(condition: tipo.isGlobal, then: 'tipoGlobal', else: '')}">{tipo.nombreDisplay}</a>
 					</f:for>
 				 
 				</div>
@@ -52,7 +52,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 			<f:for each="{publicaciones}" as="publicacion">	
 				<!-- items use Bootstrap .col- classes -->
-				<div class="grid-item col-md-4 col-sm-4 publicacion" data-tipos='[<f:for each="{publicacion.Tipo}" as="tipo" iteration="iterator">{tipo.uid}{f:if(condition: iterator.isLast, then: '', else: ',')}</f:for>]'>
+				<div class="grid-item col-md-4 col-sm-4 publicacion" style="display: none" data-tipos='[<f:for each="{publicacion.Tipos}" as="tipo" iteration="iterator">{tipo.uid}{f:if(condition: iterator.isLast, then: '', else: ',')}</f:for>]'>
 					<div class="grid-item-content">
 
 						<div class="wow bounceInUp" data-wow-duration="2s" data-wow-offset="-200">				
@@ -62,7 +62,18 @@ Otherwise your changes will be overwritten the next time you save the extension 
 									<div class="titulo"><h3>{publicacion.Titulo}</h3> <h4>{publicacion.Subtitulo} </h4> </div>
 									<div class="info">{publicacion.Autor} / <f:format.date format="d - m - Y">{publicacion.Fecha}</f:format.date>/ {publicacion.Lugar}</div>
 									<div class="descripcion"><f:format.html>{publicacion.Descripcion}</f:format.html></div>
-									<a href="#" class="btn btn-info btn-block" role="button">Ver Mas</a>
+
+									<f:if condition="{publicacion.urlArchivo}">
+									    <f:then>
+											<a href="{publicacion.urlArchivo}" target="_blank" class="btn btn-info btn-block" role="button">Ver Publicación</a>
+										</f:then>
+									    <f:else if="{publicacion.archivo}">
+									        <a href="/fileadmin{publicacion.archivo.originalResource.originalFile.identifier}" target="_blank" class="btn btn-info btn-block" role="button"> Ver Publicación</a>
+									    </f:else>
+									    <f:else>									        
+									    </f:else>
+									</f:if>
+								
 									
 									
 								</div>
