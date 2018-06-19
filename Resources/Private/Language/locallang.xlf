@@ -51,6 +51,21 @@
 			<trans-unit id="tx_publicacionesunal_domain_model_publicacion.tipos">
 				<source>Tipos</source>
 			</trans-unit>
+			<trans-unit id="plugin_previewpublicaciones.publicaciones">
+				<source>Publicaciones</source>
+			</trans-unit>
+			<trans-unit id="plugin_previewpublicaciones.titulo_link">
+				<source>Titulo del Link</source>
+			</trans-unit>
+			<trans-unit id="plugin_previewpublicaciones.subtitulo_link">
+				<source>Subtitulo del Link</source>
+			</trans-unit>
+			<trans-unit id="plugin_previewpublicaciones.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="plugin_previewpublicaciones.background">
+				<source>Ímagen del fondo</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

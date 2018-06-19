@@ -1,0 +1,81 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>General</sheetTitle>
+                    <sheetDescription>General Description</sheetDescription>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.publicaciones_a_mostrar>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.publicaciones</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>tx_publicacionesunal_domain_model_publicacion</allowed>
+                                <size>4</size>
+                                <maxitems>4</maxitems>
+                                <minitems>4</minitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.publicaciones_a_mostrar>                  
+
+                    <settings.titulo>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.titulo_link</label>
+                            <config>
+                                <type>input</type>
+                             </config>
+                        </TCEforms>
+                    </settings.titulo>
+
+                    <settings.subtitulo>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.subtitulo_link</label>
+                            <config>
+                                <type>input</type>
+                             </config>
+                        </TCEforms>
+                    </settings.subtitulo>
+
+                    <settings.link>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.link</label>
+                            <config>
+                                <type>input</type>
+                                <renderType>inputLink</renderType>
+                             </config>
+                        </TCEforms>
+                    </settings.link>             
+
+                    <settings.background>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.background</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>file</internal_type>
+                                <allowed>png,jpg,jpeg</allowed>
+                                <size>1</size>
+                                <uploadfolder>fileadmin/user_upload</uploadfolder>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.background>
+
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

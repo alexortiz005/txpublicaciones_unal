@@ -33,6 +33,28 @@ class PublicacionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     public function previewAction()
     {
 
+        $uri_background = 'fileadmin/user_upload/' . $this->settings['background'];
+        $uri_link = $this->settings['link'];
+        $titulo = $this->settings['titulo'];
+        $subtitulo = $this->settings['subtitulo'];
+        $uids_publicaciones_a_mostrar = explode(',', $this->settings['publicaciones_a_mostrar']);
+
+        $publicaciones_a_mostrar = [];
+        foreach ($uids_publicaciones_a_mostrar as $uid) {
+            $publicaciones_a_mostrar[] = $this->publicacionRepository->findByUid($uid);
+        }        
+
+
+        $this->view->assignMultiple([
+            'uri_background' => $uri_background, 
+            'uri_link' => $uri_link, 
+            'titulo' => $titulo, 
+            'subtitulo' => $subtitulo, 
+            'publicaciones_a_mostrar' => $publicaciones_a_mostrar
+        ]);
+
+        $this->response->addAdditionalHeaderData('<script src="/typo3conf/ext/publicaciones_unal/Resources/Public/Js/preview.js"></script>');
+
     }
 
     /**
