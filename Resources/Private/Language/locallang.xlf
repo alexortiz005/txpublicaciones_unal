@@ -57,8 +57,11 @@
 			<trans-unit id="plugin_previewpublicaciones.titulo_link">
 				<source>Titulo del Link</source>
 			</trans-unit>
-			<trans-unit id="plugin_previewpublicaciones.subtitulo_link">
-				<source>Subtitulo del Link</source>
+			<trans-unit id="plugin_previewpublicaciones.texto_link">
+				<source>Texto del Link</source>
+			</trans-unit>
+			<trans-unit id="plugin_previewpublicaciones.imagen_link">
+				<source>Imagen del Link</source>
 			</trans-unit>
 			<trans-unit id="plugin_previewpublicaciones.link">
 				<source>Link</source>

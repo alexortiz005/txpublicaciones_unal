@@ -9,23 +9,62 @@
 		<div class="row">
 		<f:for each="{publicaciones}" as="publicacion">	
 			<div class="col-md-6">
-				<div class="border-preview-publicacion">
-					<div class="preview-publicacion">
-						<div class="row">
-							<div class="col-md-12">
-								<h3 class="titulo-publicacion">{publicacion.titulo}</h3>
-							</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+						<h4 class="titulo-publicacion">{publicacion.titulo}</h4>
+					</div>
+				</div>
+				<div class="border-preview-publicacion">	
+
+			<f:if condition="{publicacion.urlArchivo}">
+			    <f:then>
+					<div class="preview-publicacion" data-link="{publicacion.urlArchivo}" >
+				</f:then>
+			    <f:else if="{publicacion.archivo}">
+			        <div class="preview-publicacion" data-link="/fileadmin{publicacion.archivo.originalResource.originalFile.identifier}" >
+			    </f:else>
+			    <f:else>
+			    <div class="preview-publicacion" data-link="NULL" >			        
+				</f:else>
+			</f:if>				
+					
+						<div class="row">							
 							<div class="col-md-4">
 								<img src="{publicacion.Thumbnail.originalResource.publicUrl}"  style="width:100%">							
 							</div>
 							<div class="col-md-8">
-								
+								<div class="croptext">
+									<p>
+										<f:format.stripTags>{publicacion.descripcion}</f:format.stripTags>
+									</p>
+								</div>								
 							</div>						
 						</div>					
 					</div>	
 				</div>
 			</div>				
-		</f:for>			
+		</f:for>	
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+						<h4 class="titulo-publicacion">{titulo_link}</h4>
+					</div>
+				</div>
+				<div class="border-preview-publicacion">					
+					<div class="preview-publicacion ver_mas_publicaciones" data-link="{f:uri.typolink(parameter: uri_link)}">
+						<div class="row">							
+							<div class="col-md-4">
+								<img src="{uri_imagen_link}"  style="width:100%">							
+							</div>
+							<div class="col-md-8">
+								<div class="croptext">
+									<h1>{texto_link}</h1>
+								</div>								
+							</div>						
+						</div>					
+					</div>	
+				</div>
+			</div>		
 		</div>
 	</div>
 </div>

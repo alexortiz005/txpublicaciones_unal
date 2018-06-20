@@ -19,15 +19,15 @@
                                 <type>group</type>
                                 <internal_type>db</internal_type>
                                 <allowed>tx_publicacionesunal_domain_model_publicacion</allowed>
-                                <size>4</size>
-                                <maxitems>4</maxitems>
-                                <minitems>4</minitems>
+                                <size>3</size>
+                                <maxitems>3</maxitems>
+                                <minitems>3</minitems>
                                 <show_thumbs>1</show_thumbs>
                             </config>
                         </TCEforms>
                     </settings.publicaciones_a_mostrar>                  
 
-                    <settings.titulo>
+                    <settings.titulo_link>
                         <TCEforms>
                             <exclude>1</exclude>
                             <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.titulo_link</label>
@@ -35,17 +35,17 @@
                                 <type>input</type>
                              </config>
                         </TCEforms>
-                    </settings.titulo>
+                    </settings.titulo_link>
 
-                    <settings.subtitulo>
+                    <settings.texto_link>
                         <TCEforms>
                             <exclude>1</exclude>
-                            <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.subtitulo_link</label>
+                            <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.texto_link</label>
                             <config>
                                 <type>input</type>
                              </config>
                         </TCEforms>
-                    </settings.subtitulo>
+                    </settings.texto_link>
 
                     <settings.link>
                         <TCEforms>
@@ -56,7 +56,23 @@
                                 <renderType>inputLink</renderType>
                              </config>
                         </TCEforms>
-                    </settings.link>             
+                    </settings.link>      
+
+                     <settings.imagen_link>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:publicaciones_unal/Resources/Private/Language/locallang.xlf:plugin_previewpublicaciones.imagen_link</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>file</internal_type>
+                                <allowed>png,jpg,jpeg</allowed>
+                                <size>1</size>
+                                <uploadfolder>fileadmin/user_upload</uploadfolder>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.imagen_link>
+       
 
                     <settings.background>
                         <TCEforms>
