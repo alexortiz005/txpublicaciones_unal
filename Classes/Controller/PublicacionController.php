@@ -50,7 +50,7 @@ class PublicacionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
             'uri_link' => $uri_link, 
             'titulo' => $titulo, 
             'subtitulo' => $subtitulo, 
-            'publicaciones_a_mostrar' => $publicaciones_a_mostrar
+            'publicaciones' => $publicaciones_a_mostrar
         ]);
 
         $this->response->addAdditionalHeaderData('<script src="/typo3conf/ext/publicaciones_unal/Resources/Public/Js/preview.js"></script>');

@@ -48,6 +48,7 @@ plugin.tx_publicacionesunal_previewpublicaciones {
 page{
     includeCSS {
         tipos-publicaciones = EXT:publicaciones_unal/Resources/Public/Css/tipos-publicaciones.scss
+        preview-publicaciones = EXT:publicaciones_unal/Resources/Public/Css/preview-publicaciones.scss
         animate = EXT:publicaciones_unal/Resources/Public/Css/animate.css
     }
 
