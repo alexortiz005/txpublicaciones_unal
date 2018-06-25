@@ -2,6 +2,7 @@
 	
 	.preview-publicaciones{
 
+			
 		text-shadow: 0 0 5px black;
 
 		.border-preview-publicacion{
@@ -13,6 +14,21 @@
 		    border-radius: 20px;
 		
 			.preview-publicacion{
+
+				@media (max-width: 2560px) {
+			    	font-size: 30px;			  
+				}
+
+				@media (max-width: 1440px) {
+			    	font-size: 16px;			  
+				}
+
+				@media (max-width: 1024px) {
+			    	font-size: 10px;			  
+				}
+				@media (max-width: 768px) {
+			    	font-size: 22.5px;			  
+				}								
 
 				cursor: pointer;
 
@@ -26,18 +42,35 @@
 				    box-shadow: 0 0 15px 5px slategrey;
 				}
 
-				.lineclamp-5{
-				    display: -webkit-box;
-				    -webkit-line-clamp: 5;
-				    -webkit-box-orient: vertical;
+				.croptext{
 				    overflow: hidden;
-				    text-overflow: ellipsis;
+     				text-align: center;
 				}
-
 				p{
-					margin-bottom: 15px;
-				    font-size: 22.5px;
+					margin-bottom: 15px;				    
 				    font-weight: 200;
+
+				    @media (max-width: 2560px) {
+				    	font-size:1.5em;				  
+					}
+
+					@media (max-width: 1440px) {
+				    	font-size:1.3em;				  
+					}
+
+				    @media (max-width: 1024px) {
+				    	font-size:1.5em;				  
+					}
+
+					@media (max-width: 768px) {
+				    	font-size:1.2em;				  
+					}
+
+				    @media (max-width: 320px) {
+				    	font-size:0.9em;				  
+					}
+
+					
 				}
 
 			}
@@ -46,13 +79,45 @@
 		.titulo-publicacion{
 		    text-align: center;
 		    margin-bottom:-3%;
+		    @media (max-width: 2560px) {
+				font-size:5em;				  
+			}
+
+		    @media (max-width: 1440px) {
+		    	font-size:2em;				  
+			}
+		    
 		}
 
 		.ver_mas_publicaciones{
 			h1{
-				font-size:9em;
+				@media (max-width: 2560px) {
+			    	font-size:9em;				  
+				}
+				@media (max-width: 1440px) {
+			    	font-size:8em;				  
+				}
+				@media (max-width: 1024px) {
+			    	font-size:8.6em;				  
+				}
+				@media (max-width: 768px) {
+			    	font-size:4.5em;				  
+				}
+				@media (max-width: 425px) {
+			    	font-size:4.9em;				  
+				}
+				@media (max-width: 375px) {
+			    	font-size:4.1em;				  
+				}
+				@media (max-width: 320px) {
+			    	font-size:3.3em;				  
+				}
+
 			}
 		}
+
+
+		
 	
 	}
 }
