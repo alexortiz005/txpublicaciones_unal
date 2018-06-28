@@ -1,19 +1,23 @@
 .tx-publicaciones-unal{
 	
 	.preview-publicaciones{
-
 			
-		text-shadow: 0 0 5px black;
+	    padding: 1%;
+	    margin-top: 2%;
 
 		.border-preview-publicacion{
 
-			margin:5%;
+			
+      		margin: 5% 10%;
 			padding: 0.5%;
 		    border-style: solid;
 		    border-width: 2px;
 		    border-radius: 20px;
+		    color: white;
 		
 			.preview-publicacion{
+
+				color: darkslategrey;
 
 				@media (max-width: 2560px) {
 			    	font-size: 30px;			  
@@ -37,9 +41,24 @@
 			    border-radius: 15px;
 
 				img{
-					height:10em;
+					height:11em;
 				    border-radius: 10px;
 				    box-shadow: 0 0 15px 5px slategrey;
+				}
+
+				.titulo-publicacion{
+				
+		    		text-align: justify;
+				    margin-bottom:4%;
+
+				    @media (max-width: 2560px) {
+						font-size:5em;				  
+					}
+
+				    @media (max-width: 1440px) {
+				    	font-size:1.45em;				  
+					}
+				    
 				}
 
 				.croptext{
@@ -55,7 +74,7 @@
 					}
 
 					@media (max-width: 1440px) {
-				    	font-size:1.3em;				  
+				    	font-size:1.2em;				  
 					}
 
 				    @media (max-width: 1024px) {
@@ -76,21 +95,12 @@
 			}
 		}
 
-		.titulo-publicacion{
-		    text-align: center;
-		    margin-bottom:-3%;
-		    @media (max-width: 2560px) {
-				font-size:5em;				  
-			}
 
-		    @media (max-width: 1440px) {
-		    	font-size:2em;				  
-			}
-		    
-		}
 
 		.ver_mas_publicaciones{
 			h1{
+
+    			padding-top: 5%;
 				@media (max-width: 2560px) {
 			    	font-size:9em;				  
 				}

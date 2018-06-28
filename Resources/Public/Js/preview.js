@@ -3,14 +3,7 @@ String.prototype.trunc = String.prototype.trunc ||
           return (this.length > n) ? this.substr(0, n-1) + '&hellip;' : this;
       };
 
-$( document ).ready(function() {
-	var uriBackground = $('#uri_background').val()
-	$('.frame-jumbotron').each(function() {
-		if($(this).find('.preview-publicaciones').length>0){
-			$(this).css('background-image', 'url(' + uriBackground + ')');
-			$(this).css( 'background-size', 'cover');
-		}
-	});
+$( document ).ready(function() {	
 
 	$('.croptext').find('p').each(function() {
 		var text=$(this).html()
