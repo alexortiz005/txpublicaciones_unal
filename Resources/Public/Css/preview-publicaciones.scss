@@ -3,7 +3,8 @@
 	.preview-publicaciones{
 			
 	    padding: 1%;
-	    margin-top: 2%;
+	    margin-top: 2%;	    
+	    
 
 		.border-preview-publicacion{
 
@@ -20,7 +21,7 @@
 				color: darkslategrey;
 
 				@media (max-width: 2560px) {
-			    	font-size: 30px;			  
+			    	font-size: 20px;			  
 				}
 
 				@media (max-width: 1440px) {
@@ -52,11 +53,16 @@
 				    margin-bottom:4%;
 
 				    @media (max-width: 2560px) {
-						font-size:5em;				  
+						font-size:1.6em;	
+						margin-top:0%;			  
 					}
 
 				    @media (max-width: 1440px) {
 				    	font-size:1.45em;				  
+					}
+
+					@media (max-width: 768px) {
+				    	margin-top:10%;					  
 					}
 				    
 				}
@@ -70,7 +76,7 @@
 				    font-weight: 200;
 
 				    @media (max-width: 2560px) {
-				    	font-size:1.5em;				  
+				    	font-size:1.15em;				  
 					}
 
 					@media (max-width: 1440px) {
@@ -82,7 +88,7 @@
 					}
 
 					@media (max-width: 768px) {
-				    	font-size:1.2em;				  
+				    	font-size:0.8em;				  
 					}
 
 				    @media (max-width: 320px) {
@@ -102,13 +108,13 @@
 
     			padding-top: 5%;
 				@media (max-width: 2560px) {
-			    	font-size:9em;				  
+			    	font-size:6em;				  
 				}
 				@media (max-width: 1440px) {
-			    	font-size:8em;				  
+			    	font-size:6em;				  
 				}
 				@media (max-width: 1024px) {
-			    	font-size:8.6em;				  
+			    	font-size:6.6em;				  
 				}
 				@media (max-width: 768px) {
 			    	font-size:4.5em;				  
@@ -121,6 +127,34 @@
 				}
 				@media (max-width: 320px) {
 			    	font-size:3.3em;				  
+				}
+
+			}
+
+			p{
+
+				text-align:center;
+
+				@media (max-width: 2560px) {
+			    	font-size:1.5em !important;				  
+				}
+				@media (max-width: 1440px) {
+			    	font-size:1.5em !important
+				}
+				@media (max-width: 1024px) {
+			    	font-size:1.5em !important;				  
+				}
+				@media (max-width: 768px) {
+			    	font-size:1.5em !important;				  
+				}
+				@media (max-width: 425px) {
+			    	font-size:1.5em !important;				  
+				}
+				@media (max-width: 375px) {
+			    	font-size:1.5em !important;				  
+				}
+				@media (max-width: 320px) {
+			    	font-size:1.5em !important;				  
 				}
 
 			}

@@ -6,7 +6,7 @@
 <div class="preview-publicaciones" style="background-image: url('{uri_background}');">
 	<div class="container-fluid">
 		<div class="row">
-		<f:for each="{publicaciones}" as="publicacion">	
+		<f:for each="{publicaciones}" as="publicacion" iteration="iterator">	
 			<div class="col-md-6 col-sm-6">
 
 				<div class="border-preview-publicacion">	
@@ -38,7 +38,14 @@
 						</div>					
 					</div>	
 				</div>
-			</div>				
+			</div>		
+
+			<f:if condition="{iterator.cycle}%2==0">
+				 <f:then>
+					<div class="clearfix hidden-xs"></div>
+				</f:then>			    
+			</f:if>	
+
 		</f:for>	
 			<div class="col-md-6 col-sm-6">
 				<div class="border-preview-publicacion">					
@@ -49,7 +56,8 @@
 							</div>
 							<div class="col-md-8">
 								<div class="croptext">
-									<h1>{texto_link}</h1>
+									<h1>{titulo_link}</h1>
+									<p>{texto_link}</p>
 								</div>								
 							</div>						
 						</div>					
