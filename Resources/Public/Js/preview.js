@@ -16,7 +16,10 @@ $( document ).ready(function() {
 		if($(this).data('link')=="NULL"){
 			alert('Unavailable');
 		}else{
-	    	document.location.href = $(this).data('link');
+			window.open(
+			  $(this).data('link'),
+			  '_blank' // <- This is what makes it open in a new window.
+			);
 		}
 	});
 });
