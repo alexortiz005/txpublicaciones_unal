@@ -39,7 +39,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 				<div class="btn-group-vertical hidden-sm hidden-md hidden-lg">
 					<f:for each="{tipos}" as="tipo">
-					    <a href="#"  onclick="event.preventDefault();clickTipo({tipo.uid});" class="btn btn-info botonTipoPublicacion">{tipo.nombreDisplay}</a>
+					    <a href="#" data-tipo="{f:if(condition: tipo.isGlobal, then: '-1', else: '{tipo.uid}')}" onclick="event.preventDefault();" class="btn btn-info botonTipoPublicacion">{tipo.nombreDisplay}</a>
 					</f:for>
 				 
 				</div>

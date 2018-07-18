@@ -19,7 +19,7 @@
 	    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	    transition: 0.3s;
 	    border-radius: 5px; /* 5px rounded corners */
-	    margin:6% -3%;
+	    margin:8% 5%;
 	    img {
 		    border-radius: 5px 5px 0 0;
 		}
@@ -35,7 +35,18 @@
 
 	.vertical-card-body{
 		padding-bottom:5%;
-		font-size: 10px;
+		@media (max-width: 2560px) {
+			font-size: 0.7vw;		 
+		}
+
+		@media (max-width: 992px) {
+			font-size: 1.2vw;		 
+		}
+
+		@media (max-width: 576px) {
+			font-size: 3vw;		 
+		}		
+
 		.info{
 			font-style:italic;
 		}
