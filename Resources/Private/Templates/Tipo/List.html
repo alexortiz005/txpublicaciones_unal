@@ -46,11 +46,13 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			</div>
 		
 		</div>
+		<img class="img-responsive publicaciones-loader" src="/typo3conf/ext/publicaciones_unal/Resources/Public/Images/loader.gif">
+
 		<div class="grid">
 			<!-- add sizing element for columnWidth -->
 			<div class="grid-sizer col-md-4 col-sm-4 col-xs-10 "></div>
 
-			<f:for each="{publicaciones}" as="publicacion">	
+			<f:for each="{publicaciones}" as="publicacion" reverse="true">	
 				<!-- items use Bootstrap .col- classes -->
 				<div class="grid-item col-md-4 col-sm-4 publicacion" style="display: none" data-tipos='[<f:for each="{publicacion.Tipos}" as="tipo" iteration="iterator">{tipo.uid}{f:if(condition: iterator.isLast, then: '', else: ',')}</f:for>]'>
 					<div class="grid-item-content">

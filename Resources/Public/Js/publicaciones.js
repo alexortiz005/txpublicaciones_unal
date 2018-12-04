@@ -1,3 +1,5 @@
+var flag=true;
+
 function loadMasonry(){
 	$('.grid').masonry({
 	  itemSelector: '.grid-item',
@@ -7,9 +9,12 @@ function loadMasonry(){
 }
 
 $('.botonTipoPublicacion').click(function() {
+
 	var tipo=$(this).data('tipo')
 
 	if(tipo>=0){
+
+		flag=false;
 	  	$('.publicacion').each(function(index,value) {
 
 			if($(this).data('tipos').indexOf(tipo)>=0){
@@ -23,7 +28,6 @@ $('.botonTipoPublicacion').click(function() {
 		$('.publicacion').show();		
 	}
 
-
 	loadMasonry();	
 
 	$('.botonTipoPublicacion').removeClass('active');
@@ -31,8 +35,7 @@ $('.botonTipoPublicacion').click(function() {
 
 });
 
-setTimeout(function(){
-  $('.tipoGlobal').trigger('click');
-}, 200);
-
-
+window.onload = function () {
+	$('.tipoGlobal').trigger('click')
+	$('.publicaciones-loader').hide();
+}
