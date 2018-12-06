@@ -77,9 +77,16 @@
 		padding:0px;
 	}
 
-	img.img-responsive {
-	    margin: 0 auto;
+	.publicaciones-loader{	
+		img.img-responsive {
+		    margin: 0 auto;
+		    width: 10%;
+		}
+		p{
+			text-align:center;
+		}
 	}
+
 
 	div{
 		vertical-align:unset;

@@ -282,6 +282,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_publicacionesunal_domain_model_tipo',
+                'foreign_table_where' => 'AND tx_publicacionesunal_domain_model_tipo.pid=###CURRENT_PID###',
                 'MM' => 'tx_publicacionesunal_publicacion_tipo_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,
