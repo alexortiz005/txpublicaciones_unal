@@ -33,7 +33,7 @@ class PublicacionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     public function previewAction()
     {
 
-        $uri_background = 'fileadmin/user_upload/' . $this->settings['background'];
+        $uri_background = '../fileadmin/user_upload/' . $this->settings['background'];
         $uri_imagen_link = 'fileadmin/user_upload/' . $this->settings['imagen_link'];
         $uri_link = $this->settings['link'];
         $titulo_link = $this->settings['titulo_link'];
